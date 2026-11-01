@@ -1,8 +1,8 @@
-# Free HTML florist website template with GSAP scroll animations
+# Free HTML florist website template with scroll animations and no libraries
 
-Florist website template: a one-page site for a flower shop that delivers in the evening, with this week's stems, a delivery track, weekly standing orders, wedding and event pricing, workshops and an order form. Blush and chocolate grounds carry handwriting in hot pink and magenta. It is one HTML file with an AGENTS.md, so Claude Code, Cursor or Codex can adapt it to your shop.
+Florist website template: a one-page site for a flower shop that delivers in the evening, with this week's stems, a delivery track, standing orders, event pricing, workshops and an order form. Blush and chocolate grounds carry handwriting in hot pink and magenta. Its scroll motion runs on CSS with no libraries, in one HTML file of about 27 KB gzipped with an AGENTS.md, so Claude Code, Cursor or Codex can adapt it to your shop.
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE) ![one HTML file: no build](https://img.shields.io/badge/one%20HTML%20file-no%20build-orange) ![GSAP: ScrollTrigger](https://img.shields.io/badge/GSAP-ScrollTrigger-88ce02)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE) ![one HTML file: no build](https://img.shields.io/badge/one%20HTML%20file-no%20build-orange) ![dependencies: none](https://img.shields.io/badge/dependencies-none-brightgreen)
 
 **[Live demo](https://8bsite.github.io/florist-website-template/)** · **[Use this template](https://github.com/new?template_name=florist-website-template&template_owner=8bsite)** · **[Download ZIP](https://github.com/8bsite/florist-website-template/archive/refs/heads/main.zip)** · **[Template page on 8b.com](https://8b.com/templates/moth-marigold/)**
 
@@ -24,20 +24,20 @@ curl -LO https://raw.githubusercontent.com/8bsite/florist-website-template/main/
 Then fill in the angle brackets and give your agent this prompt:
 
 ```text
-Read AGENTS.md, then edit index.html. Turn this template into the site for <my flower shop: name, street and town, opening hours, delivery window and order cut-off, delivery area and fee, this week's stems, growers and prices, standing order plans, event pricing, workshop dates, contacts>. Replace first the shop name, address, delivery rules, stems and standing orders. Keep the section ids, the classes AGENTS.md lists and each stem row in the same position as its photo. Reset --len to a reworded line's character count and set each grower's --mi to its distance in miles. Ask me for missing facts and never invent prices, hours, addresses, grower names, reviews or contacts.
+Read AGENTS.md, then edit index.html. Turn this template into the site for <my flower shop: name, street and town, opening hours, delivery window and order cut-off, delivery area and fee, this week's stems, growers and prices, standing order plans, event pricing, workshop dates, contacts>. Motion is CSS scroll-driven animation plus the inline motion kit: keep the gate script in the head, the section ids, the data-8b-section and data-8b-motion attributes, and six stems with six photos, five hour panels, six event photos. Reset --len to a reworded line's character count, set each grower's --mi in miles. Add no animation library. Never invent prices, hours, addresses, growers or contacts; ask me.
 ```
 
-To make this flower shop website template your own in a vibe coding session, point Claude Code, Cursor or Codex at AGENTS.md and let it begin with the shop's facts. Those are the name, street, opening hours, delivery window and order cut-off, the stems on the bench, the standing orders and the workshop dates. The demo invents every one, growers and distances included, so the agent should ask you rather than guess. Leave the section ids and the classes AGENTS.md lists for each script. Reset --len on a reworded big line to its character count, and set --mi on each grower row to that grower's distance in miles. Stems pair with their photos by position, so edit them together.
+To use this flower shop website template for Claude Code, Cursor or Codex in a vibe coding session, point the agent at AGENTS.md and let it begin with the shop's facts. Those are the name, street, opening hours, delivery window and order cut-off, the stems on the bench, the standing orders and the workshop dates. The demo invents every one, so the agent should ask you rather than guess. Reset --len on a reworded big line to its character count, and set --mi on each grower row to that grower's distance in miles. Stems pair with their photos by position, and the scroll motion is written for six of them, so swap a stem and its photo together.
 
 No agent? Click **[Use this template](https://github.com/new?template_name=florist-website-template&template_owner=8bsite)**, edit `index.html` on GitHub and turn on **Settings > Pages**.
 
 ## Sections and motion
 
 - **Navigation**: top bar: brand mark and name, section links, Order for tonight button; phone menu overlay with address, hours and phone.
-- **Moth and Marigold**: first screen: width-filling brand wordmark, two taglines, two actions and a shop photo; then a dark statement screen (demo: "after five"). Smooth scrolling throughout; most section headings lift in. On scroll the chocolate night rises over the first screen as a widening dome while the shop photo darkens and the wordmark spreads.
+- **Moth and Marigold**: first screen: width-filling brand wordmark, two taglines, two actions and a shop photo; then a dark statement screen (demo: "after five"). With a mouse the wheel scrolls smoothly; touch scrolls natively. Most section headings lift in. On scroll the chocolate night rises over the first screen as a widening dome while the shop photo darkens and the wordmark spreads.
 - **What the fields sent**: this week's stock: six items with source, distance and price, beside one held photo frame (demo: flower stems). In the sticky frame the front stem photo slides away left as each row passes, revealing the next, and that next stem's name turns bold magenta.
 - **Flowers that moved in**: portfolio grid of six arrangements, each with a title and a place/month caption. The columns of arrangements, three on desktop and two on phones, start at different heights and settle into line as you scroll; the script ribbon slides sideways.
-- **Cut at five, at your door by nine**: how delivery works: five hour panels (5 pm to 9 pm) on a horizontal track, each a shade darker. The section pins and five hour panels slide sideways from 5 pm to 9 pm, each darker, their photos moving at their own speed.
+- **Cut at five, at your door by nine**: how delivery works: five hour panels (5 pm to 9 pm) on a horizontal track, each a shade darker. The section holds in place while five hour panels slide sideways from 5 pm to 9 pm, each darker, their hours and photos moving at their own speed.
 - **The same evening, every week**: price list of three weekly subscriptions as table rows (demo: The Jar, The Mantel, The Lobby).
 - **Big flowers for long tables**: event services with prices and lead times, a button, and a board of six event photos. Tied to scroll, the six event photos start in a loose, tilted pile near the upper centre of the board and spread out into place.
 - **Grown within two hundred miles**: suppliers placed on a 0 to 200 mile scale by distance (demo: seven flower growers). As you scroll, each grower's pin slides from zero along the mile scale to its distance, drawing a line behind it.
@@ -61,15 +61,15 @@ No agent? Click **[Use this template](https://github.com/new?template_name=flori
 **Does the order form take orders?**  
 No. The form asks for a name, a phone or email, the evening, a budget and a note, checks that name and contact are filled in, then shows a thank-you line and sends nothing. Connect Formspree or Netlify Forms, or delete the form with its script and keep the email link. Reword the thank-you line, which promises a call before five.
 
+**Does this version need GSAP, Lenis or any other library?**  
+No. The scroll motion is CSS scroll-driven animation, and a short inline script reveals headings and smooths the mouse wheel. Nothing changes for the visitor, and the page loads 27 KB of code gzipped in one file against 73 KB. Keep the gate script, the data-8b-section and data-8b-motion attributes and the inline kit; the [first steps in Claude Code](https://8b.com/templates/for-claude-code/) cover such edits.
+
 **Can it work for florist ecommerce websites that take payments?**  
 Not on its own. The file has no cart, checkout or payment code, and the order form sends nothing until you connect a service. Point the Order for tonight, Build a bouquet and standing order buttons at your online shop or order page, and let this page carry the stems, the delivery hours, the events and the story.
 
-**How do I update the weekly stems and prices?**  
-Edit the rows under the bench heading: each has a name, a source, a distance, a price and a note. Every row pairs with one photo in the sticky frame by position, so change the photos in the same order, and add or remove a row together with its photo.
-
 ## Is it the right base?
 
-This is the right base when the shop's week has a rhythm: stock that changes, a delivery window, regulars on standing orders, and dated classes and events booked ahead. Another small shop that sells on a schedule, like a [print studio](https://8b.com/templates/dotdrum/) with dated workshops and a price calculator, fits a different template, and so does any business built around a product catalog. As a wedding florist website template it works if you keep the events and arrangements sections and trim the rest. The weak spot is commerce: stems, plans and classes are text, and nothing on the page takes a payment.
+This is the right base when the shop's week has a rhythm: stock that changes, a delivery window, regulars on standing orders, and dated classes. This is the light build: the same look and the same scroll behaviour, with no animation library and no script from a CDN. Measured here, it downloads about 27 KB of code gzipped in one file; the GSAP version needs about 73 KB and three extra requests. A [print studio](https://8b.com/templates/dotdrum/) with dated workshops and a price calculator fits a different template. As a wedding florist website template it works with the events and arrangements kept. Nothing on the page takes a payment.
 
 ## Before you publish
 
@@ -78,7 +78,9 @@ This is the right base when the shop's week has a rhythm: stock that changes, a 
 
 ## Tech
 
-GSAP 3.13.0, ScrollTrigger, Lenis 1.3.4 from jsDelivr, 100 KB, no build step. Chrome and Edge 111+, Safari 16.2+, Firefox 113+ (it uses color-mix(), container query units, cascade layers, small/dynamic viewport units). With "reduce motion" on, the page is complete and still.
+No JavaScript libraries: CSS scroll-driven animations and a small inline motion script with its own smooth wheel scrolling, 112 KB, no build step. Chrome and Edge 111+, Safari 16.2+, Firefox 113+ (it uses color-mix(), container query units, cascade layers, small/dynamic viewport units). Without scroll-driven animations (Firefox today) the scroll motion and the smooth wheel are off and each section shows its finished layout, while any load-in or looping animation still plays; with "reduce motion" on, the page is complete and nothing moves on its own (hover effects stay).
+
+A GSAP build of the same page is [`index.gsap.html`](index.gsap.html): GSAP 3.13.0, ScrollTrigger, Lenis 1.3.4 from jsDelivr, 101 KB; its scroll motion also plays in Firefox. Use one of the two files.
 
 ## License
 
